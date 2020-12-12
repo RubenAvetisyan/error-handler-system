@@ -1,5 +1,5 @@
 {
-  "name": "error-handler",
+  "name": "error-handler-system",
   "version": "1.0.0",
   "description": "Node.js Error-handling System",
   "main": "index.js",

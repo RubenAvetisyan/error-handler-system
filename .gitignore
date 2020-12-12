@@ -6,3 +6,6 @@ node_modules
 
 #lodder files
 logs
+
+# *.tgz format files
+*.tgz
