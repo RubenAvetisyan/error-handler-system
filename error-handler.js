@@ -2,11 +2,11 @@ const BaseError = require('./base-error.js');
 const { logger } = require('./logger.js');
 
 function sendMailToAdminIfCritical(err) {
-  logger.warn('Wake up Admin!!! ', err)
+  logger.warn('Wake up Admin!!! ', err);
 }
 
 function sendEventsToSentry(err) {
-  logger.info('Wake up Sentry!!! ', err)
+  logger.info('Wake up Sentry!!! ', err);
 }
 
 class ErrorHandler {

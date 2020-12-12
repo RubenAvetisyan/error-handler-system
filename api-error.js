@@ -1,8 +1,11 @@
-const { HttpClientErrorStatusCode, HttpServerErrorStatusCode } = require('./http-status-code.js')
-const BaseError = require('./base-error.js')
+const {
+  HttpClientErrorStatusCode,
+  HttpServerErrorStatusCode
+} = require('./http-status-code.js');
+const BaseError = require('./base-error.js');
 
-const serverErrorStatusCode = new HttpServerErrorStatusCode()
-const clientErrorStatusCode = new HttpClientErrorStatusCode()
+const serverErrorStatusCode = new HttpServerErrorStatusCode();
+const clientErrorStatusCode = new HttpClientErrorStatusCode();
 
 class APIError extends BaseError {
   constructor(
@@ -16,9 +19,9 @@ class APIError extends BaseError {
 }
 
 class HTTP400Error extends BaseError {
- constructor(description = 'bad request') {
-   super('BAD REQUEST', clientErrorStatusCode.BAD_REQUEST, true, description);
- }
+  constructor(description = 'bad request') {
+    super('BAD REQUEST', clientErrorStatusCode.BAD_REQUEST, true, description);
+  }
 }
 
-module.exports = {APIError, HTTP400Error}
+module.exports = { APIError, HTTP400Error };
