@@ -1,0 +1,30 @@
+name: "npm Publish"
+
+on:
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: 'bump type, major or minor or patch or empty string'
+        default: ''
+
+jobs:
+  release:
+    name: publish
+    runs-on: windows-latest
+
+    strategy:
+        matrix:
+            node-version: [12.x]
+
+    steps:
+        - name: checkout
+          uses: actions/checkout@v2.3.4
+        - name: Use Node.js ${{ matrix.node-version }}
+          uses: actions/setup-node@v2.1.3
+          with:
+              node-version: ${{ matrix.node-version }}
+              registry-url: https://registry.npmjs.org/
+        - name: publish
+          run: npm publish
+          env:
+              NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
