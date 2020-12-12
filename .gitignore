@@ -1,0 +1,8 @@
+#IDE settings
+.vscode
+
+#Node.js installed modules
+node_modules
+
+#lodder files
+logs

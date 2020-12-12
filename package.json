@@ -1,0 +1,30 @@
+{
+  "name": "error-handler",
+  "version": "1.0.0",
+  "description": "Node.js Error-handling System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RubenAvetisyan/nodejs-error-handler.git"
+  },
+  "keywords": [
+    "error",
+    "error",
+    "log",
+    "error",
+    "handler",
+    "nodejs"
+  ],
+  "author": "Ruben Avetisyan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RubenAvetisyan/nodejs-error-handler/issues"
+  },
+  "homepage": "https://github.com/RubenAvetisyan/nodejs-error-handler#readme",
+  "dependencies": {
+    "winston": "^3.3.3"
+  }
+}
