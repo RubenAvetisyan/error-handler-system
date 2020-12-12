@@ -17,7 +17,6 @@ logs
 actions-runner
 
 #linters
-.eslintrc.json
 .prettierrc.json
 .prettierignore
 
