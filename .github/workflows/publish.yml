@@ -1,0 +1,23 @@
+name: "publish"
+
+on:
+  push:
+      branches:
+        - master
+
+jobs:
+  release:
+    name: publish
+    runs-on: windows-latest
+    steps:
+        - name: checkout
+          uses: actions/checkout@v2.3.4
+        - name: node
+          uses: actions/actions/setup-node@v2.1.3
+          with:
+              node-version: 12
+              registry-url: 
+        - bane: publish
+          run: npm publish --access public
+          env:
+              NODE_AUTH_TOKEN: ${{secret.NODE_AUTH_TOKEN}}
