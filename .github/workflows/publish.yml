@@ -16,7 +16,7 @@ jobs:
           uses: actions/setup-node@v2.1.3
           with:
               node-version: 12
-              registry-url: 
+              registry-url: https://www.npmjs.com/package/
         - name: publish
           run: npm publish --access public
           env:
