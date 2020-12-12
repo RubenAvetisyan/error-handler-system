@@ -19,6 +19,3 @@ actions-runner
 #linters
 .prettierrc.json
 .prettierignore
-
-#.babel
-.babelrc
