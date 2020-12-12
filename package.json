@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RubenAvetisyan/nodejs-error-handler.git"
+    "url": "git+https://github.com/RubenAvetisyan/error-handler-system.git"
   },
   "keywords": [
     "error",
@@ -21,9 +21,9 @@
   "author": "Ruben Avetisyan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RubenAvetisyan/nodejs-error-handler/issues"
+    "url": "https://github.com/RubenAvetisyan/error-handler-system/issues"
   },
-  "homepage": "https://github.com/RubenAvetisyan/nodejs-error-handler#readme",
+  "homepage": "https://github.com/RubenAvetisyan/error-handler-system#readme",
   "dependencies": {
     "winston": "^3.3.3"
   }

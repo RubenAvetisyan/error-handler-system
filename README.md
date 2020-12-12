@@ -18,3 +18,5 @@ require('error-handler');
 
 Thats it.
 Join!
+
+link to npm package: `https://www.npmjs.com/package/error-handler-system`
