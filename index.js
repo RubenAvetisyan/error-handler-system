@@ -1,20 +1,15 @@
-const { APIError, HTTP400Error } = require('./api-error.js')
-const {HttpClientErrorStatusCode} = require('./http-status-code.js')
+const { errorHandler } = require('./error-handler.js');
 
-const { errorHandler } = require('./error-handler.js')
-
-const clientErrorStatusCode = new HttpClientErrorStatusCode()
-
-process.env.NODE_ENV = 'PROD'
+process.env.NODE_ENV = 'PROD';
 
 process.on('unhandledRejection', (reason, promise) => {
-  throw reason;
+  throw { reason, promise };
 });
 
-process.on('uncaughtException', (error) => {
- errorHandler.handleError(error);
+process.on('uncaughtException', error => {
+  errorHandler.handleError(error);
   if (!errorHandler.isTrustedError(error)) {
-    Object.keys(require.cache).forEach(key => delete require.cache[key])
-   process.exit(1);
- }
+    Object.keys(require.cache).forEach(key => delete require.cache[key]);
+    process.exit(1);
+  }
 });

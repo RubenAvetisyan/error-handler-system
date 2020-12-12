@@ -1,11 +1,25 @@
 #IDE settings
 .vscode
+.editorconfig
 
 #Node.js installed modules
 node_modules
+npm-debug.log
+.npm/
 
 #lodder files
 logs
 
 # *.tgz format files
 *.tgz
+
+#Workflow Actions Runner
+actions-runner
+
+#linters
+.eslintrc.json
+.prettierrc.json
+.prettierignore
+
+#.babel
+.babelrc
