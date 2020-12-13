@@ -4,7 +4,7 @@ Handling Operational nad Programmer Errors on NodeJS
 
 # Installation
 
-`npm i error-handler -- save`
+`npm i error-handler-system -- save`
 
 Then...
 
