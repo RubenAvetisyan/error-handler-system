@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/RubenAvetisyan/error-handler-system#readme",
   "dependencies": {
-    "winston": "^3.8.2"
+    "winston": "^3.10.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
