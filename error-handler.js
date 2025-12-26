@@ -10,13 +10,13 @@ function sendEventsToSentry(err) {
 }
 
 class ErrorHandler {
-  async handleError(err) {
-    await logger.error(
+  handleError(err) {
+    logger.error(
       'Error message from the centralized error-handling component',
       err,
     );
-    await sendMailToAdminIfCritical(err);
-    await sendEventsToSentry(err);
+    sendMailToAdminIfCritical(err);
+    sendEventsToSentry(err);
   }
 
   isTrustedError(error) {

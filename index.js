@@ -1,9 +1,7 @@
 const { errorHandler } = require('./error-handler.js');
 
-process.env.NODE_ENV = 'PROD';
-
-process.on('unhandledRejection', (reason, promise) => {
-  throw { reason, promise };
+process.on('unhandledRejection', reason => {
+  throw reason instanceof Error ? reason : new Error(String(reason));
 });
 
 process.on('uncaughtException', error => {
