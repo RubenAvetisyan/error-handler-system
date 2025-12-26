@@ -73,7 +73,10 @@ class HttpClientErrorStatusCode {
   }
 
   getCode(value) {
-    return this[value];
+    if (Object.prototype.hasOwnProperty.call(this, value)) {
+      return this[value];
+    }
+    return undefined;
   }
 }
 

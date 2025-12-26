@@ -2,17 +2,22 @@ class IsDev {
   constructor() {
     this._default = null;
     this._env = null;
-    this._values = ['develop'];
+    this._values = ['prod', 'production'];
     return this.default;
   }
 
   get default() {
-    this._default = Object.keys(process.env).some(key => {
-      const processEnvKey = process.env[key];
-      const result = this._values.some(v => processEnvKey.toLowerCase() !== v);
-      this._env = result ? { key, value: processEnvKey } : undefined;
-      return result;
-    });
+    const envValue = process.env.NODE_ENV;
+    if (!envValue) {
+      this._default = true;
+      this._env = undefined;
+      return this._default;
+    }
+
+    const normalized = envValue.toLowerCase();
+    const isProd = this._values.some(value => normalized === value);
+    this._default = !isProd;
+    this._env = { key: 'NODE_ENV', value: envValue };
 
     return this._default;
   }

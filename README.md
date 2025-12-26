@@ -1,6 +1,6 @@
 # What is this?
 
-Handling Operational nad Programmer Errors on NodeJS
+Handling Operational and Programmer Errors on NodeJS
 
 # Installation
 
@@ -9,14 +9,14 @@ Handling Operational nad Programmer Errors on NodeJS
 Then...
 
 ```
-import * as errorHandler from 'error-handler';
+import * as errorHandler from 'error-handler-system';
 
 OR
 
-require('error-handler');
+require('error-handler-system');
 ```
 
-Thats it.
+That's it.
 Join!
 
 link to npm package: `https://www.npmjs.com/package/error-handler-system`

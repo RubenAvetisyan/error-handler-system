@@ -1,4 +1,6 @@
 
+const fs = require('fs');
+const path = require('path');
 const winston = require('winston');
 const isDevEnvironment = require('./is-dev.js');
 
@@ -40,8 +42,10 @@ class Logger {
   logger;
 
   constructor() {
+    const logDirectory = path.resolve('logs');
+    fs.mkdirSync(logDirectory, { recursive: true });
     const prodTransport = new winston.transports.File({
-      filename: 'logs/error.log',
+      filename: path.join(logDirectory, 'error.log'),
       level: 'error',
     });
     const transport = new winston.transports.Console({
